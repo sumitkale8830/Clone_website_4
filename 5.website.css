@@ -14,6 +14,7 @@
   color: white;
   text-align: center;
   padding-top: 0.8%;
+  z-index: 5;
 }
 
 .navbar img {
@@ -1033,12 +1034,11 @@ a {
   }
 
   .resume {
-    height: 2600px;
+    height: 1750px;
     width: 85%;
     position: relative;
     left: 15%;
     float: left;
-
     box-sizing: border-box;
   }
 
@@ -1047,46 +1047,46 @@ a {
   }
 
   .bio {
-    height: 2300px;
+    height: 1100px;
     width: 100%;
     margin-top: 5%;
     margin-left: 2%;
+    box-sizing: border-box;
   }
 
   .summary {
-    height: 1130px;
-    width: 48%;
+    height: 750px;
+    width: 98%;
     float: left;
-    margin-right: 20px;
+    box-sizing: border-box;
   }
 
   .brandson {
-    height: 350px;
+    height: 230px;
     width: 100%;
     float: left;
     border-left: 3px solid rgb(9, 120, 221);
     padding-top: 1%;
     padding-left: 5%;
-    margin-left: 0%;
     color: rgb(66, 66, 66);
     margin-top: 3%;
+    box-sizing: border-box;
   }
   #edu {
-    height: 700px;
+    height: 410px;
     width: 100%;
     float: left;
     border-left: 3px solid rgb(9, 120, 221);
     padding-top: 1%;
     padding-left: 3%;
-    margin-left: 0%;
   }
 
   #firsti {
-    margin-left: -18px;
+    margin-left: -28px;
   }
 
   .brandson i {
-    margin-left: -15px;
+    margin-left: -22px;
     color: rgb(9, 120, 221);
     float: left;
     background-color: white;
@@ -1116,12 +1116,12 @@ a {
   }
 
   #brandson {
-    height: 1180px;
+    height: 680px;
     padding-top: 5%;
   }
 
   #senior {
-    margin-left: -19px;
+    margin-left: -29px;
   }
 
   .Portfolio {
