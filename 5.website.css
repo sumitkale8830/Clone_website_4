@@ -958,7 +958,7 @@ a {
   }
 
   .about_content {
-    height: 1900px;
+    height: 1800px;
     width: 100%;
     background-color: transparent;
     position: relative;
@@ -996,6 +996,7 @@ a {
   .about_info {
     box-sizing: border-box;
     float: left;
+    width: 100%;
   }
   .about_info p {
     font-style: oblique;
@@ -1009,6 +1010,7 @@ a {
     font-size: 17px;
     float: left;
     margin-right: 5%;
+    width: 100%;
   }
 
   #second_list {
@@ -1016,6 +1018,7 @@ a {
     font-size: 17px;
     float: left;
     margin-right: 4%;
+    width: 100%;
   }
   .about_info li {
     margin-bottom: 20px;
@@ -1031,6 +1034,7 @@ a {
   }
   #bottom_P {
     font-style: normal;
+    width: 100%;
   }
 
   .counts {
