@@ -4,7 +4,13 @@
   font-family: Raleway, sans-serif;
   box-sizing: border-box;
 }
+#check {
+  display: none;
+}
 
+label {
+  display: none;
+}
 .navbar {
   height: 730px;
   width: 20%;
@@ -814,20 +820,79 @@ a {
 }
 
 @media (max-width: 555px) {
+  #check {
+    display: none;
+  }
+  label {
+    display: block;
+  }
+
+  label #btn,
+  label #cancel {
+    position: absolute;
+    cursor: pointer;
+  }
+  label #btn {
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(9, 120, 221);
+    text-align: center;
+    padding-top: 1.5%;
+    transition: all 0.5s ease;
+    z-index: 100;
+    position: fixed;
+  }
+  label #cancel {
+    z-index: 999;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    display: none;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(9, 120, 221);
+    text-align: center;
+    padding-top: 1.5%;
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  #check:checked ~ .navbar {
+    left: 0%;
+  }
+  #check:checked ~ .label #btn {
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #check:checked ~ label #cancel {
+    right: 10px;
+    position: fixed;
+    display: block;
+  }
+
   .navbar {
     height: 730px;
-    width: 15%;
+    width: 50%;
     background-color: rgb(4, 11, 20);
     float: left;
     position: fixed;
     color: white;
     text-align: center;
-    padding-top: 0.8%;
+    padding-top: 2%;
+    left: -50%;
   }
 
   .navbar img {
-    height: 60px;
-    width: 60px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     border: 8px solid rgb(41, 47, 55);
     box-sizing: border-box;
@@ -839,13 +904,13 @@ a {
     float: left;
     margin-top: 0%;
     font-size: large;
-    margin-left: 1%;
+    margin-left: 3%;
   }
 
   .menu li {
     float: left;
     margin-top: 35%;
-    font-size: 10px;
+    font-size: 18px;
     color: rgb(155, 155, 155);
   }
   .menu li:hover i {
@@ -864,9 +929,9 @@ a {
 
   .website_content {
     height: 700px;
-    width: 85%;
+    width: 100%;
     position: relative;
-    left: 15%;
+    left: 0%;
     float: left;
     box-sizing: border-box;
     background-image: url(https://themewagon.github.io/iPortfolio/assets/img/hero-bg.jpg);
@@ -885,19 +950,19 @@ a {
   }
 
   .info h1 {
-    font-size: 55px;
+    font-size: 50px;
   }
   .info h2 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 200;
   }
 
   .about_content {
-    height: 1100px;
-    width: 85%;
+    height: 1900px;
+    width: 100%;
     background-color: transparent;
     position: relative;
-    left: 15%;
+    left: 0%;
     float: left;
     box-sizing: border-box;
   }
@@ -909,9 +974,9 @@ a {
   }
 
   .about_content p {
-    line-height: 15px;
+    line-height: 25px;
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .about_image_and_info {
@@ -922,32 +987,33 @@ a {
     background-color: transparent;
   }
   .image img {
-    width: 25%;
+    width: 100%;
     height: 100%;
     float: left;
     margin-right: 2%;
+    margin-bottom: 5%;
   }
   .about_info {
     box-sizing: border-box;
     float: left;
-    width: 72%;
   }
   .about_info p {
     font-style: oblique;
     margin-top: 10px;
     margin-bottom: 20px;
+    font-size: 16px;
   }
 
   #first_list {
     margin-bottom: 0px;
-    font-size: 15px;
+    font-size: 17px;
     float: left;
     margin-right: 5%;
   }
 
   #second_list {
     margin-bottom: 5px;
-    font-size: 15px;
+    font-size: 17px;
     float: left;
     margin-right: 4%;
   }
@@ -977,7 +1043,7 @@ a {
 
   .Counts1 {
     height: 100%;
-    width: 47%;
+    width: 100%;
     display: inline-block;
     background-color: transparent;
     padding-top: 2%;
@@ -994,19 +1060,20 @@ a {
   }
   .Counts1 h1 {
     float: left;
-    width: 0%;
+    width: 10%;
   }
   .Counts1 p {
     float: left;
-    width: 100%;
+    width: 80%;
     margin-top: 4%;
-    margin-left: 25%;
+    margin-left: 13%;
     color: gray;
   }
   .Counts1 span {
     float: left;
+    width: 80%;
     margin-top: 0%;
-    margin-left: 25%;
+    margin-left: 13%;
     font-weight: lighter;
   }
 
@@ -1019,13 +1086,13 @@ a {
   }
 
   .skils {
-    height: 450px;
-    width: 85%;
+    height: 600px;
+    width: 100%;
     background-color: aliceblue;
     position: relative;
-    left: 15%;
+    left: 0%;
     float: left;
-    padding: 3% 1% 3% 1%;
+    padding: 3% 1% 3% 3%;
     box-sizing: border-box;
   }
 
@@ -1033,11 +1100,48 @@ a {
     margin-top: 5%;
   }
 
+  .percent {
+    height: 34%;
+    width: 98%;
+    background-color: rgb(241, 246, 251);
+    padding-top: 3%;
+    float: left;
+  }
+  .percent li {
+    margin-top: 20px;
+  }
+
+  .bar {
+    background: rgb(190, 190, 190);
+    width: 95%;
+    display: block;
+    height: 10px;
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s;
+    margin-top: 15px;
+  }
+
+  #percentage {
+    float: right;
+    margin-right: 5%;
+  }
+  .bar span {
+    height: 10px;
+    float: left;
+    background-color: rgb(9, 120, 221);
+  }
+
+  .html {
+    width: 100%;
+    animation-name: html;
+    animation-duration: 2s;
+  }
   .resume {
     height: 1750px;
-    width: 85%;
+    width: 98%;
     position: relative;
-    left: 15%;
+    left: 2%;
     float: left;
     box-sizing: border-box;
   }
@@ -1048,7 +1152,7 @@ a {
 
   .bio {
     height: 1100px;
-    width: 100%;
+    width: 98%;
     margin-top: 5%;
     margin-left: 2%;
     box-sizing: border-box;
@@ -1082,7 +1186,7 @@ a {
   }
 
   #firsti {
-    margin-left: -28px;
+    margin-left: -32px;
   }
 
   .brandson i {
@@ -1116,19 +1220,20 @@ a {
   }
 
   #brandson {
-    height: 680px;
+    height: 650px;
     padding-top: 5%;
   }
 
   #senior {
-    margin-left: -29px;
+    margin-left: -32px;
+    margin-top: -25px;
   }
 
   .Portfolio {
-    height: 3950px;
-    width: 85%;
+    height: 4400px;
+    width: 100%;
     position: relative;
-    left: 15%;
+    left: 0%;
     float: left;
     padding: 3% 1% 3% 3%;
     box-sizing: border-box;
@@ -1141,7 +1246,7 @@ a {
   }
 
   .Portfolio ul {
-    margin-left: 5%;
+    margin-left: 12%;
   }
 
   .Portfolio li {
@@ -1151,13 +1256,13 @@ a {
 
   .img {
     height: 285px;
-    width: 380px;
+    width: 90%;
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 20px;
     position: relative;
+    margin-bottom: 40px;
   }
-
   .image_back img {
     width: 100%;
     height: 100%;
@@ -1226,9 +1331,9 @@ a {
 
   .service {
     height: 1200px;
-    width: 85%;
+    width: 100%;
     position: relative;
-    left: 15%;
+    left: 0%;
     float: left;
     padding: 3% 1% 3% 3%;
     box-sizing: border-box;
@@ -1243,7 +1348,7 @@ a {
     height: 140px;
     width: 380px;
     float: left;
-    margin-left: 10px;
+    margin-left: 40px;
     margin-top: 20px;
     cursor: pointer;
   }
@@ -1278,9 +1383,9 @@ a {
 
   .Testimonals {
     height: 1450px;
-    width: 85%;
+    width: 100%;
     position: relative;
-    left: 15%;
+    left: 0%;
     float: left;
     padding: 3% 1% 3% 3%;
     box-sizing: border-box;
@@ -1296,7 +1401,7 @@ a {
     height: 380px;
     width: 380px;
     float: left;
-    margin-left: 10px;
+    margin-left: 36px;
     margin-top: 20px;
     border: none;
     box-sizing: border-box;
@@ -1347,9 +1452,9 @@ a {
 
   .Contact {
     height: 1320px;
-    width: 85%;
+    width: 100%;
     position: relative;
-    left: 15%;
+    left: 0%;
     float: left;
     padding: 3% 1% 3% 3%;
     box-sizing: border-box;
@@ -1472,9 +1577,9 @@ a {
 
   .footer {
     height: 100px;
-    width: 85%;
+    width: 100%;
     position: relative;
-    left: 15%;
+    left: 0%;
     float: left;
     padding: 2% 1% 2% 1%;
     box-sizing: border-box;
