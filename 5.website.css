@@ -936,7 +936,7 @@ a {
     left: 0%;
   }
   #check:checked ~ .label #btn {
-    left: 50%;
+    left: 55%;
     opacity: 0;
     pointer-events: none;
   }
@@ -947,15 +947,15 @@ a {
   }
 
   .navbar {
-    height: 830px;
-    width: 50%;
+    height: 1000px;
+    width: 55%;
     background-color: rgb(4, 11, 20);
     float: left;
     position: fixed;
     color: white;
     text-align: center;
     padding-top: 2%;
-    left: -50%;
+    left: -55%;
   }
 
   .navbar img {
