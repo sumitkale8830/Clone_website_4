@@ -1669,7 +1669,7 @@ a {
 
 /*Tablet View */
 
-@media (min-width: 602px) and (max-width: 1000px) {
+@media (min-width: 602px) {
   #check {
     display: none;
   }
