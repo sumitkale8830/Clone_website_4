@@ -887,7 +887,7 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 600px) and (max-width: 1000px) {
+@media (max-width: 600px) and (max-width: 1050px) {
   #check {
     display: none;
   }
